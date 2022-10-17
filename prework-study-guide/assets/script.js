@@ -1,17 +1,28 @@
-var topic = ["HTML", "CSS", "Git", "JavaScript"];
+var topics = ["HTML", "CSS", "Git", "JavaScript"];
+var randomTopic = topics[Math.floor(Math.random() * topics.length)];
 
-for (var x = 0; x < topic.length; x++) {
-	console.log(topic[x]);
+function listTopics() {
+	for (var x = 0; x < topics.length; x++) {
+		console.log(topics[x]);
+	}
 }
 
-// if (topic === "HTML") {
-// 	console.log("Let's study HTML!");
-// } else if (topic === "CSS") {
-// 	console.log("Let's study CSS!");
-// } else if (topic === "Git") {
-// 	console.log("Let's study Git!");
-// } else if (topic === "JavaScript") {
-// 	console.log("Let's study JavaScript!");
-// } else {
-// 	console.log("Please try again");
-// }
+// Now this function will check if the randomTopic from the topics array matches the conditional statements.
+function selectTopic() {
+	if (randomTopic === "HTML") {
+		console.log("Let's study HTML!");
+	} else if (randomTopic === "CSS") {
+		console.log("Let's study CSS!");
+	} else if (randomTopic === "Git") {
+		console.log("Let's study Git!");
+	} else if (randomTopic === "JavaScript") {
+		console.log("Let's study JavaScript!");
+	} else {
+		console.log("Please try again");
+	}
+}
+
+console.log("Here are the topics we learned through Pre-work:");
+listTopics();
+console.log("Which topics should we study first?");
+selectTopic();
